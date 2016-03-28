@@ -1,4 +1,4 @@
-# ![gitlab-print](media/promotion.png)
+# <div align="center"><img src="media/promotion.png" width="220" alt="gitlab-print"></div>
 
 > Chrome extension to adjust layout of GitLab pages for printing.
 
