@@ -11,7 +11,8 @@
     "activeTab"
   ],
   "background": {
-    "scripts": ["src/background.js"]
+    "scripts": ["src/background.js"],
+    "persistent": false
   },
   "icons": {
     "128": "icons/icon128.png"
