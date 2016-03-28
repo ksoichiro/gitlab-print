@@ -1,8 +1,12 @@
 {
   "name": "gitlab-print",
   "version": "0.0.1",
+  "dependencies": {
+    "jquery": "2.2.2"
+  },
   "scripts": {
     "clean": "rm -rf build",
-    "build": "mkdir -p build/extension && cp -pR src icons manifest.json license build/extension/ && cd build && zip -r extension.zip extension"
+    "build": "mkdir -p build/tmp/lib && cp -pR src icons manifest.json license build/tmp/ && cp -p node_modules/jquery/dist/jquery.min.js build/tmp/lib/",
+    "release": "npm run build && cp -pR build/tmp build/extension && cd build && zip -r extension.zip extension"
   }
 }
