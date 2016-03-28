@@ -3,6 +3,7 @@
 > Chrome extension to adjust layout of GitLab pages for printing.
 
 [![Build Status](https://travis-ci.org/ksoichiro/gitlab-print.svg?branch=master)](https://travis-ci.org/ksoichiro/gitlab-print)
+[![Build status](https://ci.appveyor.com/api/projects/status/1v4i2qccadkiapjv?svg=true)](https://ci.appveyor.com/project/ksoichiro/gitlab-print)
 
 [![](media/ChromeWebStore_Badge_v2_206x58.png)][store]
 
