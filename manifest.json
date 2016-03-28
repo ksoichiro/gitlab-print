@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "GitLab Print",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adjust layout of GitLab pages for printing.",
   "homepage_url": "https://github.com/ksoichiro/gitlab-print",
   "browser_action": {
