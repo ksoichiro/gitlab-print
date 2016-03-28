@@ -7,6 +7,8 @@ There are redundant components and space
 when we print GitLab pages (markdown page, issues, merge requests, etc.).  
 With this extension, you can remove them from the contents.
 
+[![](ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/gitlab-print/ooopojgjhkkklgmdahnahcneikejmllm)
+
 ## Tests
 
 This extension is tested on following GitLab versions:
