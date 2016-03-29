@@ -20,7 +20,7 @@ show = (target) -> restore target, "display"
     restore ".page-sidebar-expanded", "padding-left"
     restore ".page-sidebar-expanded", "padding-right"
     show ".right-sidebar.right-sidebar-expanded"
-    show ".new_note"
+    show ".new_note.js-main-target-form"
     restore ".issuable-discussion", "height"
     restore "pre code", "white-space"
 
@@ -45,7 +45,7 @@ show = (target) -> restore target, "display"
     hide ".right-sidebar.right-sidebar-expanded"
 
     # Hide new note form
-    hide ".new_note"
+    hide ".new_note.js-main-target-form"
 
     # Remove redundant space below the notes
     change ".issuable-discussion", "height", ""
