@@ -60,5 +60,7 @@ $ ->
       href: chrome.extension.getURL 'src/style.css'
     .appendTo "head"
 
-    guide = '<div id="gitlab-print-guide">Page content is coverted for printing. After printing, please reload the page to revert it.</div>'
-    $("body").prepend guide
+    $ '<div/>',
+      id: "gitlab-print-guide"
+    .text "Page content is coverted for printing. After printing, please reload the page to revert it."
+    .prependTo "body"
