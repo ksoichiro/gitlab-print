@@ -1,4 +1,13 @@
 $(function() {
+  // Remove top padding
+  $("body")[0].style.paddingTop = "0px";
+
+  // Hide header
+  var headers = $(".header-expanded");
+  if (headers && 0 < headers.length) {
+    headers[0].style.display = "none";
+  }
+
   // Hide side bar
   var sidebars = $(".sidebar-wrapper");
   if (sidebars && 0 < sidebars.length) {
@@ -37,5 +46,30 @@ $(function() {
     codes.each(function(i) {
       this.style.whiteSpace = "pre-wrap";
     });
+  }
+
+  // Show guide
+  if ($("#gitlab-print-style").length === 0) {
+    var printStyle =
+      '<style type="text/css" id="gitlab-print-style">' +
+      '@media print { ' +
+      '  #gitlab-print-guide { ' +
+      '    display: none; ' +
+      '  } ' +
+      '} ' +
+      '@media screen { ' +
+      '  #gitlab-print-guide { ' +
+      '    height: 48px; ' +
+      '    color: #fff; ' +
+      '    background-color: #900; ' +
+      '    text-align: center; ' +
+      '    padding-top: 12px; ' +
+      '    font-size: 1.1em; ' +
+      '  } ' +
+      '} ' +
+      '</style>';
+    $("head").append(printStyle);
+    var guide = '<div id="gitlab-print-guide">Page content is coverted for printing. After printing, please reload the page to revert it.</div>';
+    $("body").prepend(guide);
   }
 });
