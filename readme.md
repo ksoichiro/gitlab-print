@@ -7,6 +7,8 @@
 
 [![](media/ChromeWebStore_Badge_v2_206x58.png)][store]
 
+English | [日本語](readme.ja.md)
+
 Adjust layout of GitLab pages for printing.  
 There are redundant components and space
 when we print GitLab pages (markdown page, issues, merge requests, etc.).  
