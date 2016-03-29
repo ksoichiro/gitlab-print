@@ -50,25 +50,13 @@ $(function() {
 
   // Show guide
   if ($("#gitlab-print-style").length === 0) {
-    var printStyle =
-      '<style type="text/css" id="gitlab-print-style">' +
-      '@media print { ' +
-      '  #gitlab-print-guide { ' +
-      '    display: none; ' +
-      '  } ' +
-      '} ' +
-      '@media screen { ' +
-      '  #gitlab-print-guide { ' +
-      '    height: 48px; ' +
-      '    color: #fff; ' +
-      '    background-color: #900; ' +
-      '    text-align: center; ' +
-      '    padding-top: 12px; ' +
-      '    font-size: 1.1em; ' +
-      '  } ' +
-      '} ' +
-      '</style>';
-    $("head").append(printStyle);
+    $('<link/>', {
+      id: "gitlab-print-style",
+      rel: "stylesheet",
+      type: "text/css",
+      href: chrome.extension.getURL('src/style.css')
+    }).appendTo("head");
+
     var guide = '<div id="gitlab-print-guide">Page content is coverted for printing. After printing, please reload the page to revert it.</div>';
     $("body").prepend(guide);
   }

@@ -1,0 +1,15 @@
+@media print {
+  #gitlab-print-guide {
+    display: none;
+  }
+}
+@media screen {
+  #gitlab-print-guide {
+    height: 48px;
+    color: #fff;
+    background-color: #900;
+    text-align: center;
+    padding-top: 12px;
+    font-size: 1.1em;
+  }
+}
