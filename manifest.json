@@ -3,7 +3,7 @@
   "name": "GitLab Print",
   "version": "0.0.3",
   "default_locale": "en",
-  "description": "Adjust layout of GitLab pages for printing.",
+  "description": "__MSG_extensionDescription__",
   "homepage_url": "https://github.com/ksoichiro/gitlab-print",
   "browser_action": {
     "default_icon": "icons/icon128.png"

@@ -1,4 +1,8 @@
 {
+  "extensionDescription": {
+    "message": "GitLabのページのレイアウトを印刷用に調整します。",
+    "description": ""
+  },
   "guide": {
     "message": "印刷用にページ内容が変更されています。",
     "description": ""
