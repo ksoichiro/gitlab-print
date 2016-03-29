@@ -17,6 +17,7 @@ show = (target) -> restore target, "display"
     restore "body", "padding-top"
     show ".header-expanded"
     show ".sidebar-wrapper"
+    restore ".page-with-sidebar", "padding-top"
     restore ".page-sidebar-expanded", "padding-left"
     restore ".page-sidebar-expanded", "padding-right"
     show ".right-sidebar.right-sidebar-expanded"
@@ -37,7 +38,8 @@ show = (target) -> restore target, "display"
     # Hide side bar
     hide ".sidebar-wrapper"
 
-    # Remove side paddings
+    # Remove paddings
+    change ".page-with-sidebar", "padding-top", "0px"
     change ".page-sidebar-expanded", "padding-left", "0px"
     change ".page-sidebar-expanded", "padding-right", "0px"
 
