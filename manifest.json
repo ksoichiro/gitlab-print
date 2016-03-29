@@ -18,6 +18,7 @@
     "128": "icons/icon128.png"
   },
   "web_accessible_resources": [
-    "src/style.css"
+    "src/style.css",
+    "src/toggle.js"
   ]
 }

@@ -12,4 +12,10 @@
     padding-top: 12px;
     font-size: 1.1em;
   }
+  #gitlab-print-guide a {
+    margin-left: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 }

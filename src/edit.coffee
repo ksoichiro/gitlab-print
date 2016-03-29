@@ -12,7 +12,7 @@ hide = (target) -> change target, "display", "none"
 
 show = (target) -> restore target, "display"
 
-$ ->
+@toggle = ->
   if converted()
     restore "body", "padding-top"
     show ".header-expanded"
@@ -26,6 +26,7 @@ $ ->
 
     $("#gitlab-print-style").remove()
     $("#gitlab-print-guide").remove()
+    $("#gitlab-print-toggle").remove()
   else
     # Remove top padding
     change "body", "padding-top", "0px"
@@ -60,7 +61,24 @@ $ ->
       href: chrome.extension.getURL 'src/style.css'
     .appendTo "head"
 
+    $ '<script></script>',
+      id: "gitlab-print-toggle"
+      type: "text/javascript"
+      src: chrome.extension.getURL 'src/toggle.js'
+    .appendTo "head"
+
     $ '<div/>',
       id: "gitlab-print-guide"
-    .text "Page content is coverted for printing. After printing, please reload the page to revert it."
+    .text "Page content is coverted for printing."
     .prependTo "body"
+
+    $ '<a/>',
+      href: "javascript:gitlabPrintToggle();"
+    .text "Revert"
+    .appendTo "#gitlab-print-guide"
+
+# Add handler to invoke toggle(), only once
+if !@.gitlabPrintToggleHandler
+  @.gitlabPrintToggleHandler = (data) ->
+    chrome.runtime.sendMessage "toggle"
+  document.addEventListener "gitlab-print-toggle", @.gitlabPrintToggleHandler
