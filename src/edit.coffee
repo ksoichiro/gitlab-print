@@ -1,32 +1,58 @@
+converted = () -> $("#gitlab-print-style").length isnt 0
+
+change = (target, key, value) ->
+  $(target).attr "data-original-#{key}", $(target).css key
+  $(target).css key, value
+
+restore = (target, key) ->
+  $(target).css key, $(target).attr "data-original-#{key}"
+  $(target).removeAttr "data-original-#{key}"
+
+hide = (target) -> change target, "display", "none"
+
+show = (target) -> restore target, "display"
+
 $ ->
-  # Remove top padding
-  $("body").css "padding-top", "0px"
+  if converted()
+    restore "body", "padding-top"
+    show ".header-expanded"
+    show ".sidebar-wrapper"
+    restore ".page-sidebar-expanded", "padding-left"
+    restore ".page-sidebar-expanded", "padding-right"
+    show ".right-sidebar.right-sidebar-expanded"
+    show ".new_note"
+    restore ".issuable-discussion", "height"
+    restore "pre code", "white-space"
 
-  # Hide header
-  $(".header-expanded").css "display", "none"
+    $("#gitlab-print-style").remove()
+    $("#gitlab-print-guide").remove()
+  else
+    # Remove top padding
+    change "body", "padding-top", "0px"
 
-  # Hide side bar
-  $(".sidebar-wrapper").css "display", "none"
+    # Hide header
+    hide ".header-expanded"
 
-  # Remove side paddings
-  $(".page-sidebar-expanded").css
-    "padding-left": "0px"
-    "padding-right": "0px"
+    # Hide side bar
+    hide ".sidebar-wrapper"
 
-  # Hide right side bar
-  $(".right-sidebar.right-sidebar-expanded").css "display", "none"
+    # Remove side paddings
+    change ".page-sidebar-expanded", "padding-left", "0px"
+    change ".page-sidebar-expanded", "padding-right", "0px"
 
-  # Hide new note form
-  $(".new_note").css "display", "none"
+    # Hide right side bar
+    hide ".right-sidebar.right-sidebar-expanded"
 
-  # Remove redundant space below the notes
-  $(".issuable-discussion").css "height", ""
+    # Hide new note form
+    hide ".new_note"
 
-  # Wrap codes
-  $("pre code").css "white-space", "pre-wrap"
+    # Remove redundant space below the notes
+    change ".issuable-discussion", "height", ""
 
-  # Show guide
-  if $("#gitlab-print-style").length is 0
+    # Wrap codes
+    change "pre code", "white-space", "pre-wrap"
+
+    # Show guide
     $ '<link/>',
       id: "gitlab-print-style"
       rel: "stylesheet"
