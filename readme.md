@@ -20,8 +20,9 @@ With this extension, you can remove them from the contents.
 1. Show pages on your GitLab site.
 1. Click the extension button: ![](media/button.png)
 1. Print the page.
-1. Reload the page if you want to see the original content.  
-   This extension itself does not have undo feature.
+1. If you want to see the original content,  
+   click the extension button again
+   or click the revert link on top of the page, or reload the page.
 
 ## Tests
 
