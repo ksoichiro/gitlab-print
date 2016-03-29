@@ -14,7 +14,8 @@ clean = ->
 
 build = ->
   fs.mkdirsSync libDir
-  fs.copySync 'src', "#{tmpDir}/src"
+  fs.copySync 'src', "#{tmpDir}/src",
+    filter: (s) -> s.split('.').pop() is 'css'
   fs.copySync 'icons', "#{tmpDir}/icons"
   fs.copySync 'manifest.json', "#{tmpDir}/manifest.json"
   fs.copySync 'license', "#{tmpDir}/license"

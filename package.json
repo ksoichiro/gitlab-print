@@ -12,7 +12,8 @@
   },
   "scripts": {
     "clean": "coffee build.coffee clean",
-    "build": "coffee build.coffee build",
+    "compile": "coffee -o build/tmp/src -c src",
+    "build": "coffee build.coffee build && npm run compile",
     "release": "npm run build && coffee build.coffee release"
   }
 }
