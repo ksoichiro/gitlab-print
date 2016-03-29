@@ -5,13 +5,14 @@
     "jquery": "2.2.2"
   },
   "devDependencies": {
+    "coffee-script": "1.10.0",
     "rimraf": "2.5.2",
     "fs-extra": "0.26.7",
     "archiver": "0.21.0"
   },
   "scripts": {
-    "clean": "node build.js clean",
-    "build": "node build.js build",
-    "release": "npm run build && node build.js release"
+    "clean": "coffee build.coffee clean",
+    "build": "coffee build.coffee build",
+    "release": "npm run build && coffee build.coffee release"
   }
 }
