@@ -1,0 +1,10 @@
+{
+  "guide": {
+    "message": "印刷用にページ内容が変更されています。",
+    "description": ""
+  },
+  "revert": {
+    "message": "元に戻す",
+    "description": ""
+  }
+}

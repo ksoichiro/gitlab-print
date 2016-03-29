@@ -1,0 +1,10 @@
+{
+  "guide": {
+    "message": "Page content is coverted for printing.",
+    "description": ""
+  },
+  "revert": {
+    "message": "Revert",
+    "description": ""
+  }
+}

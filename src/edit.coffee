@@ -71,12 +71,12 @@ show = (target) -> restore target, "display"
 
     $ '<div/>',
       id: "gitlab-print-guide"
-    .text "Page content is coverted for printing."
+    .text chrome.i18n.getMessage "guide"
     .prependTo "body"
 
     $ '<a/>',
       href: "javascript:gitlabPrintToggle();"
-    .text "Revert"
+    .text chrome.i18n.getMessage "revert"
     .appendTo "#gitlab-print-guide"
 
 # Add handler to invoke toggle(), only once
