@@ -32,6 +32,7 @@ This extension is tested on following GitLab versions:
 
 * v8.6.1
 * v7.14.0
+* v7.13.x
 
 ## License
 
