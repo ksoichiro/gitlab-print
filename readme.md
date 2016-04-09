@@ -4,8 +4,7 @@
 
 [![Build Status](https://travis-ci.org/ksoichiro/gitlab-print.svg?branch=master)](https://travis-ci.org/ksoichiro/gitlab-print)
 [![Build status](https://ci.appveyor.com/api/projects/status/1v4i2qccadkiapjv?svg=true)](https://ci.appveyor.com/project/ksoichiro/gitlab-print)
-
-[![](media/ChromeWebStore_Badge_v2_206x58.png)][store]
+[![chrome web store](https://img.shields.io/badge/chrome%20web%20store-gitlab--print-brightgreen.svg)][store]
 
 English | [日本語](readme.ja.md)
 
